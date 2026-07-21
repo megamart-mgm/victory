@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Victory Vibrant | Web Development Gallery</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Hanken+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#131b2e",
+                    "on-surface": "#dae2fd",
+                    "on-surface-variant": "#c7c4d7",
+                    "error": "#ffb4ab",
+                    "outline-variant": "#464554",
+                    "secondary": "#ffb59e",
+                    "on-primary-fixed": "#07006c",
+                    "on-error-container": "#ffdad6",
+                    "primary-container": "#8083ff",
+                    "background": "#0b1326",
+                    "surface-bright": "#31394d",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "on-secondary": "#5e1700",
+                    "on-background": "#dae2fd",
+                    "tertiary-fixed": "#e0e3e5",
+                    "on-tertiary": "#2d3133",
+                    "secondary-fixed-dim": "#ffb59e",
+                    "surface-container-high": "#222a3d",
+                    "on-tertiary-container": "#272a2c",
+                    "surface": "#0b1326",
+                    "surface-container": "#171f33",
+                    "secondary-container": "#ff571a",
+                    "on-secondary-fixed": "#3a0b00",
+                    "inverse-on-surface": "#283044",
+                    "surface-container-lowest": "#060e20",
+                    "primary": "#c0c1ff",
+                    "tertiary-container": "#8e9193",
+                    "on-primary-fixed-variant": "#2f2ebe",
+                    "on-error": "#690005",
+                    "surface-tint": "#c0c1ff",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-primary-container": "#0d0096",
+                    "error-container": "#93000a",
+                    "surface-container-highest": "#2d3449",
+                    "on-secondary-fixed-variant": "#852400",
+                    "surface-dim": "#0b1326",
+                    "primary-fixed": "#e1e0ff",
+                    "secondary-fixed": "#ffdbd0",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "on-primary": "#1000a9",
+                    "surface-variant": "#2d3449",
+                    "outline": "#908fa0",
+                    "inverse-surface": "#dae2fd",
+                    "primary-fixed-dim": "#c0c1ff",
+                    "on-secondary-container": "#521300",
+                    "inverse-primary": "#494bd6",
+                    "tertiary": "#c4c7c9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Syne"],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Syne"],
+                    "headline-lg": ["Syne"],
+                    "headline-lg-mobile": ["Syne"],
+                    "body-md": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Syne"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                    "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                    "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                    "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                    "headline-lg": ["40px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                    "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                    "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                    "display-lg-mobile": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        .glass {
+            background: rgba(23, 31, 51, 0.6);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+        .project-card:hover .project-footer {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface-container/60 backdrop-blur-xl border-b border-white/10 shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface">Victory Vibrant</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">About &amp; Contact</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#">Graphic Design</a>
+<a class="text-primary font-bold font-label-md text-label-md" href="#">Web Development</a>
+<button class="bg-primary text-on-primary-container px-6 py-2 rounded-full font-label-md text-label-md hover:scale-105 transition-transform duration-300 active:scale-95">Let's Work</button>
+</nav>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</header>
+<main class="pt-32 pb-24">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop mb-24 fade-in-up">
+<div class="max-w-4xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6 text-on-surface">
+                    Web <span class="text-primary">Development</span> Excellence.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                    Crafting high-performance digital experiences that merge functional engineering with avant-garde aesthetics. From responsive architectures to interactive interfaces.
+                </p>
+</div>
+</section>
+<!-- Project Grid -->
+<section class="px-margin-mobile md:px-margin-desktop space-y-section-gap">
+<!-- Project 1: Fintech Dashboard -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center fade-in-up" style="animation-delay: 0.1s;">
+<div class="md:col-span-7 relative group overflow-hidden rounded-xl">
+<div class="aspect-[16/10] bg-surface-container-highest overflow-hidden rounded-xl border border-white/5 shadow-2xl">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A sophisticated fintech dashboard UI displayed on a sleek, high-end desktop monitor. The interface features complex data visualizations, translucent glassmorphic modules, and a deep navy and electric indigo color palette. Soft glow effects emanate from key UI elements. Minimalist typography and spacious layout communicate professional authority and precision in a modern digital finance setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJc6BormQ6gCsNkQGve-8SyFcy-jpVDhJ0b5tHQDb7LkZzwMbjAC_MxqdNa_n7T4o0tWme0dpraN8jMWGr8GAPRrJup7yGkIq9B344tw63vg_1GRNkdvrTmgcahmIzWbEuj3BnM2Bk_OTeB_NnVzTP5rgalpH9jnsLQk0zCxqK8GHXz1cVgQyZEgSmTatoanLMNCGtb-bjHAMjqQVrkbtPzalbknYV-LaVcZgA-_DVOKORSBywWejHDg"/>
+</div>
+<!-- Mobile View Overlay -->
+<div class="absolute -bottom-6 -right-6 w-1/3 aspect-[9/19] bg-surface-container overflow-hidden rounded-2xl border-4 border-surface shadow-2xl hidden md:block">
+<img class="w-full h-full object-cover" data-alt="A mobile version of a fintech dashboard showing a condensed, responsive layout on a high-end smartphone screen. The UI retains the electric indigo and deep navy aesthetic with simplified charts and clean navigation. The lighting is crisp and modern, emphasizing the seamless transition from desktop to mobile user experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfAqkyKiCEP7TMEb7C9ltm5EvB5sugAKtpBXBTorjb8u3slgKJCyu-2TZ6CtxlYv53vQHI-zS6W7zBZNmJyEUdYfZDs94VZ64TIQlL5HXj_wZ2NxmLubR7EkbABB6gc5m-e1JfUemNFu3k9XXVSZImREn9XBTLSq96PpQEkL0lpgM-XzacF1rEtqX5C6iKZ8CE-dcGuRgPMDajEknykvR1fbADSPok_13_3xMDacEuXlpHYqa5B8y5og"/>
+</div>
+</div>
+<div class="md:col-span-5 space-y-6">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary-container/20 text-primary text-[12px] font-bold rounded-full border border-primary/20 uppercase tracking-widest">Fintech</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[12px] font-bold rounded-full border border-white/5 uppercase tracking-widest">2024</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Lumina Asset Management</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                        An enterprise-grade financial dashboard focused on real-time data streaming and complex asset visualization. Optimized for sub-second latency and accessibility.
+                    </p>
+<div class="flex gap-4 items-center">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+<span class="material-symbols-outlined text-primary" data-icon="database">database</span>
+<span class="material-symbols-outlined text-primary" data-icon="cloud">cloud</span>
+</div>
+<div class="h-4 w-px bg-white/10"></div>
+<div class="text-label-md font-label-md text-on-surface-variant">React / Next.js / Tailwind CSS</div>
+</div>
+<button class="group flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
+                        View Project <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project 2: E-commerce Experience -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center fade-in-up" style="animation-delay: 0.2s;">
+<div class="md:col-span-5 order-2 md:order-1 space-y-6">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-secondary-container/20 text-secondary text-[12px] font-bold rounded-full border border-secondary/20 uppercase tracking-widest">E-Commerce</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[12px] font-bold rounded-full border border-white/5 uppercase tracking-widest">2023</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Veloce Fashion</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                        High-end luxury retail platform with custom motion transitions, dynamic inventory management, and a headless CMS architecture for global scalability.
+                    </p>
+<div class="flex gap-4 items-center">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="shopping_bag">shopping_bag</span>
+<span class="material-symbols-outlined text-secondary" data-icon="animation">animation</span>
+<span class="material-symbols-outlined text-secondary" data-icon="bolt">bolt</span>
+</div>
+<div class="h-4 w-px bg-white/10"></div>
+<div class="text-label-md font-label-md text-on-surface-variant">Shopify / Hydrogen / Framer Motion</div>
+</div>
+<button class="group flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all">
+                        Case Study <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 relative group overflow-hidden rounded-xl">
+<div class="aspect-[16/10] bg-surface-container-highest overflow-hidden rounded-xl border border-white/5 shadow-2xl">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A high-end luxury fashion e-commerce website featuring minimalist editorial design. Large, high-resolution lifestyle photography is paired with bold, elegant serif typography. The color palette is neutral with soft beige and black accents. The interface includes a glassmorphic sidebar and seamless micro-interactions on product hover. The lighting is cinematic and clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg3Iq8hoxDZNGNxNweVjvkaJY4yDOedZznLTd3h4hme6Fi5UITqOucisUlcIN5g2Kn261vA82A4mw4CURNkwEct8oNFUKn8yTH8MMKnNb1eyO5rE35zBvhjO3SEQEkBT0PXzP2ir91iG3HgogMxkRaFaEvxmfEG93I4SoSZQjMqrBcQ0VP7aJuOcjtgaiVPfq_y9SnZb0-fJVU67ygyIxpAG6PJ-MVMEAiavv8nGpdilCxUPVQPS6MVA"/>
+</div>
+<div class="absolute -bottom-6 -left-6 w-1/3 aspect-[9/19] bg-surface-container overflow-hidden rounded-2xl border-4 border-surface shadow-2xl hidden md:block">
+<img class="w-full h-full object-cover" data-alt="Mobile shopping experience for a luxury fashion brand shown on a premium smartphone. The vertical layout focuses on large product images and a simplified, thumb-friendly navigation bar at the bottom. The interface feels premium and tactile with smooth scrolling and elegant transitions between categories." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWO7_H1ZUuQ2x39wDry-s6KLI4ufRYqjFUDVe4FwiCWQ3XE-o2_OSfJdz4zw92ljgNYlHQk3Z_8Lu7Ghv8F0UGJHu7cOJ4KXJ-8sCp4cN0gklLHhYQa6MOIQBSQGZiZ2KB4X43UzZBj1YuHC1DR6Cl6oZIu3NADghMES0NkCjPfycTaYXMrnumWuLxbDPlvi1Dq1XJqKRo_fpnh6PGqhA3eJLxx1MKNp5zg83dIAWff0tNCADRbHkTdw"/>
+</div>
+</div>
+</div>
+<!-- Project 3: SaaS Platform -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center fade-in-up" style="animation-delay: 0.3s;">
+<div class="md:col-span-7 relative group overflow-hidden rounded-xl">
+<div class="aspect-[16/10] bg-surface-container-highest overflow-hidden rounded-xl border border-white/5 shadow-2xl">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A complex SaaS project management platform UI with a dark mode aesthetic. The screen displays a Kanban board with colorful task cards, team collaboration avatars, and a real-time activity feed. The design uses a 12-column grid system with generous whitespace. UI elements feature subtle gradients of purple and teal against a deep charcoal background. The atmosphere is professional and high-tech." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNkdCu0vbny8Kvb9YFjSybpHwDo4Isgw8wPd2MaBWvl0wfhCQUIvzTuJLmCNzwDSzP6nOn86qqFZXiSDM3eYIG0QJiwHb56fdGg1pIuCqds1Xhy0w6LBVVcvyR8zUBmZ9ZT5TCcL5hd_Eys7UMOwqN-l6T0SRZlBgWop6S-S7-_TtP0oaGw1xEtyE5yR8D-GqFV436l9QmHI-rFmnFXeEz4Mb4F6a-QEFRA3jN50yB-ECNNk12aqnUwA"/>
+</div>
+<div class="absolute -bottom-6 -right-6 w-1/3 aspect-[9/19] bg-surface-container overflow-hidden rounded-2xl border-4 border-surface shadow-2xl hidden md:block">
+<img class="w-full h-full object-cover" data-alt="A smartphone displaying the mobile application for a SaaS management tool. The screen shows a simplified dashboard with notifications and quick-action buttons. The design maintains the dark mode aesthetic with vibrant status icons and a clear typography hierarchy for easy reading on the go." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf9Kxp5zO3RaoyOPvkY5X-M-bt1f1vh7TGPydVSKizJ7q3CYH9ULDx_j6cqiZmyF9e0sOJgHIFHVPbUfGzQuIvdiIV04CVsjyImYmw2qFn_fc7nI14FACgt9YjcSDQAXNc5WpceV1dYDp5FKv5iUAZX5-erZRL8qWxfDx5EIpBf1_pU_umRnd2dY7-UoA_zRCRUYFM_yaUeNoJCLeajpC9pf19Xb-1xsdRIrwuxi85wFiWPKpmrUoCig"/>
+</div>
+</div>
+<div class="md:col-span-5 space-y-6">
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary-container/20 text-primary text-[12px] font-bold rounded-full border border-primary/20 uppercase tracking-widest">SaaS</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[12px] font-bold rounded-full border border-white/5 uppercase tracking-widest">2023</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Nexus Workflow</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                        A collaborative environment for remote teams. Developed with WebSockets for real-time syncing, featuring a custom-built drag-and-drop Kanban architecture.
+                    </p>
+<div class="flex gap-4 items-center">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="groups">groups</span>
+<span class="material-symbols-outlined text-primary" data-icon="sync">sync</span>
+<span class="material-symbols-outlined text-primary" data-icon="dashboard_customize">dashboard_customize</span>
+</div>
+<div class="h-4 w-px bg-white/10"></div>
+<div class="text-label-md font-label-md text-on-surface-variant">Vue.js / Node.js / PostgreSQL</div>
+</div>
+<button class="group flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
+                        Launch App <span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-margin-mobile md:px-margin-desktop mt-section-gap fade-in-up">
+<div class="glass p-12 md:p-24 rounded-3xl text-center space-y-8 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 -z-10 blur-3xl rounded-full translate-y-1/2"></div>
+<h2 class="font-headline-lg text-headline-lg md:text-[64px] text-on-surface max-w-3xl mx-auto leading-tight">
+                    Have a vision for your next <span class="text-primary italic">digital anchor?</span>
+</h2>
+<p class="text-on-surface-variant text-body-lg max-w-xl mx-auto">
+                    Let's combine technical precision with creative energy to build something unforgettable.
+                </p>
+<div class="flex flex-col md:flex-row justify-center gap-6 pt-4">
+<button class="bg-primary text-on-primary-container px-10 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-lg shadow-primary/20">
+                        Start Your Project
+                    </button>
+<button class="glass px-10 py-5 rounded-full font-bold text-lg text-on-surface hover:bg-white/10 transition-colors duration-300">
+                        View More Work
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/10 w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="font-headline-md text-headline-md text-primary font-bold">Victory Vibrant</div>
+<div class="flex flex-wrap justify-center gap-8 text-on-surface-variant font-body-md">
+<a class="hover:text-primary transition-colors duration-300" href="#">Dribbble</a>
+<a class="hover:text-primary transition-colors duration-300" href="#">Behance</a>
+<a class="hover:text-primary transition-colors duration-300" href="#">Email</a>
+<a class="hover:text-primary transition-colors duration-300" href="#">LinkedIn</a>
+</div>
+<div class="text-on-surface-variant opacity-60 text-sm">
+            © 2024 Victory Vibrant. All rights reserved.
+        </div>
+</footer>
+<!-- Glassy Navigation Menu (Mobile Toggle Content - Minimal JS logic) -->
+<div class="fixed inset-0 z-[100] bg-surface/95 backdrop-blur-2xl transition-transform translate-x-full duration-500 flex flex-col items-center justify-center space-y-8 md:hidden" id="mobile-nav">
+<button class="absolute top-6 right-6 text-primary" id="close-nav">
+<span class="material-symbols-outlined text-4xl" data-icon="close">close</span>
+</button>
+<a class="text-2xl font-headline-md text-on-surface" href="#">Home</a>
+<a class="text-2xl font-headline-md text-on-surface" href="#">About &amp; Contact</a>
+<a class="text-2xl font-headline-md text-on-surface" href="#">Graphic Design</a>
+<a class="text-2xl font-headline-md text-primary font-bold" href="#">Web Development</a>
+<button class="bg-primary text-on-primary-container px-10 py-4 rounded-full font-bold">Let's Work</button>
+</div>
+<script>
+        const menuBtn = document.querySelector('header button');
+        const mobileNav = document.getElementById('mobile-nav');
+        const closeNav = document.getElementById('close-nav');
+
+        menuBtn.addEventListener('click', () => {
+            mobileNav.classList.remove('translate-x-full');
+        });
+
+        closeNav.addEventListener('click', () => {
+            mobileNav.classList.add('translate-x-full');
+        });
+
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
+</body></html>

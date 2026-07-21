@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Graphic Design Gallery | Victory Vibrant</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=Hanken+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#131b2e",
+                    "on-surface": "#dae2fd",
+                    "on-surface-variant": "#c7c4d7",
+                    "error": "#ffb4ab",
+                    "outline-variant": "#464554",
+                    "secondary": "#ffb59e",
+                    "on-primary-fixed": "#07006c",
+                    "on-error-container": "#ffdad6",
+                    "primary-container": "#8083ff",
+                    "background": "#0b1326",
+                    "surface-bright": "#31394d",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "on-secondary": "#5e1700",
+                    "on-background": "#dae2fd",
+                    "tertiary-fixed": "#e0e3e5",
+                    "on-tertiary": "#2d3133",
+                    "secondary-fixed-dim": "#ffb59e",
+                    "surface-container-high": "#222a3d",
+                    "on-tertiary-container": "#272a2c",
+                    "surface": "#0b1326",
+                    "surface-container": "#171f33",
+                    "secondary-container": "#ff571a",
+                    "on-secondary-fixed": "#3a0b00",
+                    "inverse-on-surface": "#283044",
+                    "surface-container-lowest": "#060e20",
+                    "primary": "#c0c1ff",
+                    "tertiary-container": "#8e9193",
+                    "on-primary-fixed-variant": "#2f2ebe",
+                    "on-error": "#690005",
+                    "surface-tint": "#c0c1ff",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-primary-container": "#0d0096",
+                    "error-container": "#93000a",
+                    "surface-container-highest": "#2d3449",
+                    "on-secondary-fixed-variant": "#852400",
+                    "surface-dim": "#0b1326",
+                    "primary-fixed": "#e1e0ff",
+                    "secondary-fixed": "#ffdbd0",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "on-primary": "#1000a9",
+                    "surface-variant": "#2d3449",
+                    "outline": "#908fa0",
+                    "inverse-surface": "#dae2fd",
+                    "primary-fixed-dim": "#c0c1ff",
+                    "on-secondary-container": "#521300",
+                    "inverse-primary": "#494bd6",
+                    "tertiary": "#c4c7c9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Syne"],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Syne"],
+                    "headline-lg": ["Syne"],
+                    "headline-lg-mobile": ["Syne"],
+                    "body-md": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Syne"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(23, 31, 51, 0.6);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .portfolio-image-container:hover img {
+            transform: scale(1.05);
+        }
+        .portfolio-image-container img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface-container/60 backdrop-blur-xl border-b border-white/10 shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-primary dark:text-primary-fixed hover:scale-105 transition-transform duration-300 scale-95 active:scale-100" id="drawer-toggle">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface">Victory Vibrant</span>
+</div>
+<!-- Desktop Nav Items -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About &amp; Contact</a>
+<a class="font-label-md text-label-md text-primary font-bold hover:scale-105 transition-transform duration-300" href="#">Graphic Design</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Web Development</a>
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md px-6 py-2.5 rounded-full hover:scale-105 transition-transform duration-300 scale-95 active:scale-100">Let's Work</button>
+</div>
+</nav>
+<!-- Navigation Drawer (Mobile) -->
+<div class="fixed inset-0 bg-background/80 backdrop-blur-sm z-[55] hidden transition-opacity duration-300 opacity-0" id="drawer-overlay"></div>
+<aside class="fixed inset-y-0 left-0 z-[60] bg-surface-container-high dark:bg-surface-container-lowest rounded-r-xl h-full w-80 backdrop-blur-2xl border-r border-white/10 shadow-2xl -translate-x-full transition-transform duration-300 cubic-bezier(0.4, 0, 0.2, 1) flex flex-col p-6" id="drawer">
+<div class="flex justify-between items-center mb-10">
+<span class="font-headline-md text-headline-md text-primary">Victory Vibrant</span>
+<button class="text-on-surface-variant" id="drawer-close"><span class="material-symbols-outlined" data-icon="close">close</span></button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-4 py-3 hover:bg-surface-bright transition-colors duration-300 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span> Home
+            </a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-4 py-3 hover:bg-surface-bright transition-colors duration-300 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span> About &amp; Contact
+            </a>
+<a class="font-label-md text-label-md bg-primary-container text-on-primary-container rounded-full px-4 py-3 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined" data-icon="palette">palette</span> Graphic Design
+            </a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-4 py-3 hover:bg-surface-bright transition-colors duration-300 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span> Web Development
+            </a>
+</nav>
+</aside>
+<main class="pt-24 min-h-screen">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-16 md:py-24 max-w-container-max mx-auto text-center md:text-left">
+<h1 class="reveal font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-none">
+                Visual <span class="text-primary italic">Narratives</span> <br/>&amp; Bold Identities.
+            </h1>
+<p class="reveal font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+                A curated selection of high-impact graphic design work, ranging from luxury branding systems to vibrant digital illustrations that command attention.
+            </p>
+<!-- Category Filter Bar -->
+<div class="reveal flex flex-wrap gap-4 justify-center md:justify-start mb-16">
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md px-6 py-2 rounded-full transition-all">All Projects</button>
+<button class="glass-card hover:bg-surface-bright text-on-surface-variant font-label-md text-label-md px-6 py-2 rounded-full transition-all">Branding</button>
+<button class="glass-card hover:bg-surface-bright text-on-surface-variant font-label-md text-label-md px-6 py-2 rounded-full transition-all">Social Media</button>
+<button class="glass-card hover:bg-surface-bright text-on-surface-variant font-label-md text-label-md px-6 py-2 rounded-full transition-all">Illustration</button>
+</div>
+</section>
+<!-- Portfolio Bento Grid -->
+<section class="px-margin-mobile md:px-margin-desktop pb-section-gap max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Project 1: Large Branding -->
+<div class="reveal md:col-span-8 group relative overflow-hidden rounded-xl aspect-[16/10] glass-card portfolio-image-container">
+<img class="w-full h-full object-cover" data-alt="A professional high-end branding showcase for a luxury watch brand. The composition features elegant typography in a deep electric indigo color palette on a dark navy textured background. Soft, cinematic lighting highlights metallic accents and a minimalist logo design. The atmosphere is sophisticated, modern, and authoritative, reflecting the brand's premium identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkYjHvxQECU9d3vmX4WL4VLh2Bf-4uZ96w-G2G-0aMHYggQZJt0X_mA29a_mgvrxYV8HVW8Mrh1ZZ_2foHKqlsghXgdFBBLxkORC8YVznMLTE6v3E58MyUnokoj_xZeeR6P96cb1CR5oEsesroK-a1Je9pMmiaz6zSNhzc91IXXthLDs4W4cjspZlUWXJRtDwmEd17u5Cj6D1hPB4MJxKi4xUHqorpr6PGWHauPeilg8CvQKMJwnWOlg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 flex flex-col gap-2">
+<span class="bg-primary/20 text-primary font-label-md text-label-md px-4 py-1 rounded-full backdrop-blur-md w-fit">Branding</span>
+<h3 class="font-headline-lg text-headline-lg text-white">Lumina Chronos Identity</h3>
+</div>
+</div>
+<!-- Project 2: Social Media Assets -->
+<div class="reveal md:col-span-4 group relative overflow-hidden rounded-xl aspect-square md:aspect-auto glass-card portfolio-image-container">
+<img class="w-full h-full object-cover" data-alt="Vibrant and high-energy social media graphic assets for a tech conference. The design uses bold, overlapping geometric shapes in neon purple and coral pink. Sharp, futuristic sans-serif typography announces key speaker names against a dark, tech-inspired background with subtle data-stream patterns. The mood is energetic, creative, and futuristic, perfectly capturing the vibrant event spirit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChyznsC_tx1UkTb6NJPGWUwML18eoTageQt18fnDmq_hhazYitsM900saU1d3YMmgK4jbMqJKeuac8iBcc5zzy1uPP30xzM0LqFxt3YacpQWwmB2SrDEjOxynCLBINM3lhNLzwyTxSE_r0dmGyPeSqOt91QkiO15iyAmmjyikDuXUG8hW8McseXPdr-rcSjdcPszqUhMbUwIllsJ54tvBrpXEn62Fs6bvovsis4r8GhLYH2dnxhAaSTA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 flex flex-col gap-2">
+<span class="bg-primary/20 text-primary font-label-md text-label-md px-4 py-1 rounded-full backdrop-blur-md w-fit">Social Media</span>
+<h3 class="font-headline-md text-headline-md text-white">Nexus Tech Series</h3>
+</div>
+</div>
+<!-- Project 3: Illustration (Tall) -->
+<div class="reveal md:col-span-4 group relative overflow-hidden rounded-xl aspect-[3/4] glass-card portfolio-image-container">
+<img class="w-full h-full object-cover" data-alt="A striking digital illustration of a stylized futuristic cyber-botanical garden. Glowing neon flowers in shades of indigo and ultraviolet emerge from a sleek, chrome-like environment. The illustration style is crisp and detailed with high-contrast shadows and ethereal atmospheric glows. The mood is dreamy and surreal, blending natural organic forms with cutting-edge digital aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVveUcnFjEmeakudZWeRn_LdbMd1b1ZooZhPS3LDR7145P531KJiih291RWgcUBN6fqLlr_rJXmdUaBxrJiRfy99c-AGL_RbJ62VPV8VJnEWjk0qjFjvMS6C36W4gzKvGx3SqwCoywtGHSwKxftB0A6o9LYGWn-jqxlVyA0HraVfP3Z_1mDtqblRr9-1gaqcViml7Xsgdh2oLVeDybHaGDTQuEs3QpKh0xS7QLA38CLkSDWEy6H35etw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 flex flex-col gap-2">
+<span class="bg-primary/20 text-primary font-label-md text-label-md px-4 py-1 rounded-full backdrop-blur-md w-fit">Illustration</span>
+<h3 class="font-headline-md text-headline-md text-white">Cyber-Eden Concept</h3>
+</div>
+</div>
+<!-- Project 4: Wide Packaging/Assets -->
+<div class="reveal md:col-span-8 group relative overflow-hidden rounded-xl aspect-[16/8] glass-card portfolio-image-container">
+<img class="w-full h-full object-cover" data-alt="Premium minimalist packaging design for a curated collection of artisanal spirits. The labels feature intricate copper-foil detailing on matte charcoal paper. The typography is a blend of a classic serif and a modern monospaced font, set in a clean grid layout. The lighting is low and dramatic, highlighting the texture of the paper and the reflective foil, creating a sense of luxury and results-driven craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbiMs4qTPhRWdSRuxyFd0KktyKe4A_I1dyqDoP60yRzsW8o9AaLZVZsFQ5IfFeWq2C8SKTd2U4sqoYMRRaSbVJ_Z_OzrOSTv0FhahYgHr_Dvww_1Kf3m6MOgmHl1iyWLpQ-pExu1EvGrHhBgQmBIFkPmqjrg3EHOwWVW1c4hTGXZMj8EzmPzVGEtMD8uRXhMFd17bwe1pCAWNMa2p1y66QyaskEypXICHAuaxU92enbC51OlRYPPMvug"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 flex flex-col gap-2">
+<span class="bg-primary/20 text-primary font-label-md text-label-md px-4 py-1 rounded-full backdrop-blur-md w-fit">Branding</span>
+<h3 class="font-headline-lg text-headline-lg text-white">Aether Spirits Packaging</h3>
+</div>
+</div>
+<!-- Project 5: Creative Poster -->
+<div class="reveal md:col-span-6 group relative overflow-hidden rounded-xl aspect-square glass-card portfolio-image-container">
+<img class="w-full h-full object-cover" data-alt="An experimental abstract poster design featuring liquid chrome typography that seems to flow across the canvas. The color palette is dominated by deep indigo with vibrant orange accents creating high visual tension. The composition is asymmetrical and bold, using high-quality whitespace to frame the central fluid motion. The overall mood is avant-garde, professional, and energetically vibrant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIMjSd0Ve_eQciOgL0jJ8zAHTaFI6Onv_LxQ66x52k1h1K8q7mlbBsgSKtxiaiKYnq1rZddnlZUsStcVanM8DLA4aQ2_Nzj-3ASMLUfs-Wg_eK6f6wSjJlrFiB4ZzNBBnVkubbiYXm4vG39RsolZOHNOoPSFWcwvv7Ceu5rzbF0Molb5IaQPZeMpdZazYPeAe8722lA72A-SGwaG9Axp4R_LFrZpa_Wab0bnnN-rZEDL_e0B5jZvGksw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 flex flex-col gap-2">
+<span class="bg-primary/20 text-primary font-label-md text-label-md px-4 py-1 rounded-full backdrop-blur-md w-fit">Graphic Design</span>
+<h3 class="font-headline-md text-headline-md text-white">Kinetic Flow Campaign</h3>
+</div>
+</div>
+<!-- Project 6: More illustration -->
+<div class="reveal md:col-span-6 group relative overflow-hidden rounded-xl aspect-square glass-card portfolio-image-container">
+<img class="w-full h-full object-cover" data-alt="A collection of vibrant, flat-style vector illustrations for a digital lifestyle app. The characters are rendered with expressive poses and bold, saturated colors like electric indigo and sunset orange. The background features minimalist urban architecture with clean lines and soft gradients. The mood is approachable, contemporary, and filled with curated energy, perfect for a modern tech-savvy audience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnxZjTVdXRY9K7oizGOvPsU5tDLT0KTKb5LaUYq5Oh-0-e3FES7_4ir-_AZEP0Gc_D5nKBjwymucCdfJZCClmcrBMzT6B6WgyQlIAGbQTXmKg-Pmi5-U4dzx6TMGJveuJOeHyUqwJclm6We5xnWat7WBtGTSBQKbOjp0sfnY54zLng56xPtWK_lKo1AoyL3sMCH_V94LpmkdmST8r4DCBmvrzXSrzNOGUfr5hYHJKvVMUk85iLGevarw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 flex flex-col gap-2">
+<span class="bg-primary/20 text-primary font-label-md text-label-md px-4 py-1 rounded-full backdrop-blur-md w-fit">Illustration</span>
+<h3 class="font-headline-md text-headline-md text-white">Modern Living Series</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="glass-card rounded-3xl p-12 md:p-24 text-center reveal overflow-hidden relative">
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] rounded-full -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full -ml-32 -mb-32"></div>
+<h2 class="font-headline-lg text-headline-lg mb-6 relative z-10">Have a project in mind?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-12 relative z-10">
+                    Whether you're looking for a complete brand overhaul or a single custom illustration, I'm here to bring your vibrant vision to life.
+                </p>
+<div class="flex flex-col md:flex-row gap-6 justify-center relative z-10">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-10 py-4 rounded-full hover:scale-105 transition-transform duration-300 shadow-lg shadow-primary/20">Start a Project</button>
+<button class="glass-card hover:bg-surface-bright text-on-surface font-label-md text-label-md px-10 py-4 rounded-full hover:scale-105 transition-transform duration-300">View Services</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-white/10 bg-surface-container-lowest dark:bg-surface-container-lowest flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-12 gap-gutter">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-headline-md text-headline-md font-bold">Victory Vibrant</span>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Victory Vibrant. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Dribbble</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Behance</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Email</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">LinkedIn</a>
+</div>
+</footer>
+<script>
+        // Reveal animation on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveal.getBoundingClientRect().top;
+                const elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Mobile Drawer Logic
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('drawer-overlay');
+        const toggle = document.getElementById('drawer-toggle');
+        const close = document.getElementById('drawer-close');
+
+        const openDrawer = () => {
+            drawer.classList.remove('-translate-x-full');
+            overlay.classList.remove('hidden');
+            setTimeout(() => overlay.classList.add('opacity-100'), 10);
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeDrawer = () => {
+            drawer.classList.add('-translate-x-full');
+            overlay.classList.remove('opacity-100');
+            setTimeout(() => {
+                overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        };
+
+        toggle.addEventListener('click', openDrawer);
+        close.addEventListener('click', closeDrawer);
+        overlay.addEventListener('click', closeDrawer);
+
+        // Micro-interactions for buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => btn.classList.add('scale-95'));
+            btn.addEventListener('mouseup', () => btn.classList.remove('scale-95'));
+            btn.addEventListener('mouseleave', () => btn.classList.remove('scale-95'));
+        });
+    </script>
+</body></html>

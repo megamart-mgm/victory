@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Victory Vibrant | Creative Solutions</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Hanken+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#131b2e",
+                    "on-surface": "#dae2fd",
+                    "on-surface-variant": "#c7c4d7",
+                    "error": "#ffb4ab",
+                    "outline-variant": "#464554",
+                    "secondary": "#ffb59e",
+                    "on-primary-fixed": "#07006c",
+                    "on-error-container": "#ffdad6",
+                    "primary-container": "#8083ff",
+                    "background": "#0b1326",
+                    "surface-bright": "#31394d",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "on-secondary": "#5e1700",
+                    "on-background": "#dae2fd",
+                    "tertiary-fixed": "#e0e3e5",
+                    "on-tertiary": "#2d3133",
+                    "secondary-fixed-dim": "#ffb59e",
+                    "surface-container-high": "#222a3d",
+                    "on-tertiary-container": "#272a2c",
+                    "surface": "#0b1326",
+                    "surface-container": "#171f33",
+                    "secondary-container": "#ff571a",
+                    "on-secondary-fixed": "#3a0b00",
+                    "inverse-on-surface": "#283044",
+                    "surface-container-lowest": "#060e20",
+                    "primary": "#c0c1ff",
+                    "tertiary-container": "#8e9193",
+                    "on-primary-fixed-variant": "#2f2ebe",
+                    "on-error": "#690005",
+                    "surface-tint": "#c0c1ff",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-primary-container": "#0d0096",
+                    "error-container": "#93000a",
+                    "surface-container-highest": "#2d3449",
+                    "on-secondary-fixed-variant": "#852400",
+                    "surface-dim": "#0b1326",
+                    "primary-fixed": "#e1e0ff",
+                    "secondary-fixed": "#ffdbd0",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "on-primary": "#1000a9",
+                    "surface-variant": "#2d3449",
+                    "outline": "#908fa0",
+                    "inverse-surface": "#dae2fd",
+                    "primary-fixed-dim": "#c0c1ff",
+                    "on-secondary-container": "#521300",
+                    "inverse-primary": "#494bd6",
+                    "tertiary": "#c4c7c9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Syne"],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Syne"],
+                    "headline-lg": ["Syne"],
+                    "headline-lg-mobile": ["Syne"],
+                    "body-md": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Syne"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            font-family: 'Hanken Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(23, 31, 51, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0px 20px 40px rgba(99, 102, 241, 0.15);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .portfolio-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-card:hover .glass-footer {
+            transform: translateY(-8px);
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: floating 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface-container/60 backdrop-blur-xl border-b border-white/10 shadow-sm">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full max-w-[1440px] mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface">
+                Victory Vibrant
+            </div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-primary font-bold font-label-md text-label-md hover:scale-105 transition-transform duration-300" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md hover:scale-105 transition-transform duration-300" href="#">Graphic Design</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md hover:scale-105 transition-transform duration-300" href="#">Web Development</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md hover:scale-105 transition-transform duration-300" href="#">About &amp; Contact</a>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-2 rounded-full hover:scale-105 active:scale-95 transition-all">
+                    Let's Work
+                </button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto">
+<div class="max-w-4xl reveal-on-scroll">
+<div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary-container/20 border border-primary/30 text-primary mb-6 animate-float">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">spark</span>
+<span class="font-label-md text-label-md">Creative Director &amp; Developer</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8">
+                    Creative Solutions for the <span class="text-primary">Digital Age.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10">
+                    High-impact design, seamless development, and strategic content creation tailored for modern brands that refuse to be ignored.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md text-lg hover:scale-105 active:scale-95 transition-all shadow-lg shadow-primary/20">
+                        Explore Portfolio
+                    </button>
+<button class="glass-panel text-on-surface px-8 py-4 rounded-full font-label-md text-label-md text-lg hover:scale-105 active:scale-95 transition-all">
+                        Book a Strategy Call
+                    </button>
+</div>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute bottom-10 right-margin-desktop hidden lg:block reveal-on-scroll delay-300">
+<div class="glass-panel p-6 rounded-xl flex items-center gap-4 border border-white/10">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a confident creative woman with a vibrant, modern style, captured in high-key soft studio lighting. She is wearing a structured indigo blazer against a minimalist dark background. The lighting highlights her sharp features and warm, authoritative expression, embodying the 'Victory Vibrant' brand ethos of professionalism and energy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaA3VYITwzOsf6FpKumm6gjuhVXdYRI1ILnytYRbvIpLFlH_pzIOK0ZlgetOQZA8a3XhwheKx8jsGh3i3Ubf7G1T3cPUXtPKg_rUbqW82EKYCrfP739kCZxtLppHMaVnPl1_VXoXgCjGKCtbcS9hFRDCUS2S70i3RXSYx7gwtaU4LBB5FIQiP-1V4SdkXWnlQO1ucBirv6nypgT4TYlP1rkNlnxhU6Hxzk3kdfZb0ON2TRLZ_u2nx0Aw"/>
+</div>
+<div>
+<div class="text-on-surface font-bold">100+ Projects Delivered</div>
+<div class="text-on-surface-variant text-sm">To Global Innovators</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-gutter reveal-on-scroll">
+<div class="max-w-xl">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">Mastering Multiple Disciplines</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">I bridge the gap between aesthetics and functionality, providing a full-spectrum digital presence for your brand.</p>
+</div>
+<div class="hidden md:block">
+<div class="font-display-lg text-surface-container-highest select-none opacity-20">SERVICES</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Graphic Design -->
+<div class="glass-panel p-8 rounded-xl flex flex-col h-full reveal-on-scroll hover-glow transition-all duration-300 group">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Graphic Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Visual identities that command attention. From logo suites to full brand guidelines and social assets.</p>
+<a class="flex items-center gap-2 text-primary font-label-md text-label-md group-hover:gap-4 transition-all" href="#">
+                        View Work <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Web Development -->
+<div class="glass-panel p-8 rounded-xl flex flex-col h-full reveal-on-scroll hover-glow transition-all duration-300 group" style="transition-delay: 100ms;">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Web Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Bespoke, performant websites built with modern frameworks. Fast, responsive, and SEO-optimized.</p>
+<a class="flex items-center gap-2 text-primary font-label-md text-label-md group-hover:gap-4 transition-all" href="#">
+                        View Work <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Content Writing -->
+<div class="glass-panel p-8 rounded-xl flex flex-col h-full reveal-on-scroll hover-glow transition-all duration-300 group" style="transition-delay: 200ms;">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">edit_note</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Content Writing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Compelling copy that converts. Blogs, whitepapers, and sales funnels that speak your brand's truth.</p>
+</div>
+<!-- Social Media -->
+<div class="glass-panel p-8 rounded-xl flex flex-col h-full reveal-on-scroll hover-glow transition-all duration-300 group" style="transition-delay: 300ms;">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Social Management</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">End-to-end community building and content strategy to scale your presence across platforms.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Spotlight (High-End Imagery) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="mb-16 reveal-on-scroll text-center">
+<span class="text-primary font-label-md text-label-md uppercase tracking-widest block mb-4">Selected Work</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Curated Digital Experiences</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Feature -->
+<div class="md:col-span-8 portfolio-card relative aspect-video md:aspect-auto md:h-[600px] rounded-2xl overflow-hidden reveal-on-scroll">
+<div class="absolute inset-0 transition-transform duration-700 bg-cover bg-center" data-alt="A wide-angle, cinematic shot of a futuristic brand identity system displayed on multiple sleek mobile devices and oversized vertical monitors. The color palette is dominated by electric indigo and deep navy, with glowing white typography. The setting is a darkened, high-tech studio with soft teal ambient light reflecting off metallic surfaces. This image represents high-end, premium web development and graphic design expertise." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAljz6ARjYmgQFhtIEssQ54BvnWPYE-swQDf18ALfDq2xM6BiiTWI4YAvyvoFhaC4mP55DUPpkYYWydeHgzm1okJiomgB1oL3tTi6xJXIElKHcnZZ3waQZ3_o5nYq4j8vXwZ7Br9wnOzH1l6xMAH_-oReJE0fTjxQKBtR5IxFGsQjSmqNur13dUAMoSbAA6qTly79mWM6JiUcMeS3BEtFW3nKffT-e9aqAIHxI3IIGX-rSM8aLUPRMZCg')"></div>
+<div class="absolute bottom-6 left-6 right-6 glass-panel p-6 rounded-xl glass-footer transition-transform duration-300">
+<div class="flex justify-between items-center">
+<div>
+<span class="font-label-md text-[12px] bg-primary/20 text-primary px-3 py-1 rounded-full border border-primary/30 mb-2 inline-block">Web Development</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Nexus Fintech Platform</h4>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">open_in_new</span>
+</div>
+</div>
+</div>
+<!-- Vertical Feature -->
+<div class="md:col-span-4 portfolio-card relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden reveal-on-scroll" style="transition-delay: 200ms;">
+<div class="absolute inset-0 transition-transform duration-700 bg-cover bg-center" data-alt="A vertical, editorial-style photography of a luxury minimalist brand's social media grid. The imagery features high-fashion models in muted tones, combined with bold, vibrant orange graphic overlays. The composition is asymmetrical and modern, suggesting a high level of creative direction and social media management. The mood is sophisticated, trend-setting, and energetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDW5E4xFlptTgWOb0qX7g7NV6Eex5xKM_7E1-UDvRlE3tU8qKfQcF-Nh5qWdG80VRCRTczi9ppEcVM494zXRRZMq278bB55bdyQR8GWmjuLQH2ePg-WY2R3t34a07SsBWlsEsiQN2MHygdEF8SBA62afrVyYeFPhXP0J_gi9GRe174miobw7_VqrFFUlc11wsmnUtX5wANm_7S_lm3OaZGS89Ve9difsNj4xvZ6GtjwTX2KMSf2irLpBg')"></div>
+<div class="absolute bottom-6 left-6 right-6 glass-panel p-6 rounded-xl glass-footer transition-transform duration-300">
+<span class="font-label-md text-[12px] bg-secondary/20 text-secondary px-3 py-1 rounded-full border border-secondary/30 mb-2 inline-block">Social Management</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Lumière Luxury Collective</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Me / Testimonial Bento -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- About Me Teaser -->
+<div class="lg:col-span-7 reveal-on-scroll">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8">Victory is the Goal. Vibrant is the Vibe.</h2>
+<div class="space-y-6 font-body-lg text-body-lg text-on-surface-variant">
+<p>I don't just build sites or design logos; I create digital ecosystems where brands can thrive. With over 8 years in the creative industry, I've learned that the best results come from the perfect marriage of technical precision and artistic risk-taking.</p>
+<p>Whether you're a startup looking for your first identity or an established brand ready for a digital overhaul, I bring a tailored approach to every pixel and every line of code.</p>
+</div>
+<div class="mt-10 flex items-center gap-6">
+<div class="flex -space-x-4">
+<div class="w-12 h-12 rounded-full border-2 border-surface-container-low bg-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up headshot of a creative tech entrepreneur with short dark hair and a friendly, focused look. The background is a blurred office with warm orange lighting. The aesthetic is clean, professional, and trustworthy, fitting the 'Victory' brand personality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANHaO2pLm1mV7aUyP15HkfmKv6TALWS4iwwMbQanVkFvn9US13d34JE5MFddMzyGvkgqDmmiA6oOxptWRRFqGXGYBwa92UtpetXt9nmeC_Hu6nPrVZNAnZ_1Db2JAbm2ox7jA1_kcBiSwQKCGlwdCHA-kexUk8JBM-cVm5RCPLA9YJyaAAiu8hLFy3MAow61WU399GTCd0oq4FemiM2XAD04oioyaezX-v7h3TBRjA4BJh8ydlkD_GHA"/>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-surface-container-low bg-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a female fashion designer with a bold, artistic expression. She is wearing large colorful earrings and a stylish indigo scarf. The lighting is dramatic and artistic, emphasizing her creative and 'Vibrant' professional energy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtx-ouFbBCqWu_ceG891ZastdKWhK8QQVz8Y9vIbCo9TOtxGi__Qpz7vhQ7_m-EP30y0X3c1peGFQzjVIgS6bk8teCrBEcKw9uPy3H4Xd4sDdSznsval5GqPjbPKkJ-LrMxgc0THKhYLlR4ZxQsFHFxrFaLYFJ6hc2nX6BAwAx4JQEseRwQHZzyJqoXSuu_i14ilmxooYuU479Y1X7pCGfUHQ9fNa0fobXc3WCGaART7iiXaecb7aozw"/>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-surface-container-low bg-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up of a young male software developer looking intensely at a code editor, his face softly illuminated by the blue light of the screen. The mood is deep, focused, and technologically advanced, echoing the premium development services of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCekQ6NDVW1kA4MIFfj1hJH8mwOst0fYWsJrzL4gwHXuLIRdDypvpLfZ3Ime4eQwidoo2cHJiuwyBwRuWkPxJLpOueU4tOnl8FtwChL4x1JrQcTcuLT_stUpezP7_tIUzOhpBnqYKwuRoJ9AWYRYBadytdk1zbxHJgW1pUCzhib6S7PLK1JlQ2kIb2iBadvdrt-Bm_rF5hniZ6Di2HzlanrDMPkiTP5AocgZmL5UqhUmD8VPEjtJhBjhw"/>
+</div>
+</div>
+<div class="text-on-surface-variant">
+<span class="text-on-surface font-bold">Trusted by 50+</span> partners worldwide
+                        </div>
+</div>
+</div>
+<!-- Testimonial Card -->
+<div class="lg:col-span-5 reveal-on-scroll" style="transition-delay: 200ms;">
+<div class="glass-panel p-10 rounded-2xl h-full border border-primary/20 relative">
+<span class="material-symbols-outlined text-primary text-6xl opacity-30 absolute top-8 left-8">format_quote</span>
+<div class="relative z-10">
+<p class="font-headline-md text-headline-md text-on-surface mb-8 italic">"Victory completely transformed our digital presence. Her ability to handle both the design and the technical development meant our vision was never lost in translation. Pure creative genius."</p>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center font-bold text-on-primary">JS</div>
+<div>
+<div class="text-on-surface font-bold">Julian Sterling</div>
+<div class="text-on-surface-variant text-sm">CEO, Zenith Dynamics</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="w-full border-t border-white/10 mt-section-gap bg-surface-container-lowest dark:bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="font-headline-md text-headline-md font-bold text-primary">Victory Vibrant</div>
+<div class="font-body-md text-body-md text-on-surface-variant">© 2024 Victory Vibrant. All rights reserved.</div>
+</div>
+<div class="flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#">Dribbble</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#">Behance</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#">Email</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+<!-- Scripts for reveal and micro-interactions -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll reveal animation logic
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+                observer.observe(el);
+            });
+
+            // Smooth parallax-ish effect for portfolio cards
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                document.querySelectorAll('.portfolio-card div[style*="background-image"]').forEach(bg => {
+                    const speed = 0.05;
+                    bg.style.backgroundPositionY = -(scrolled * speed) + 'px';
+                });
+            });
+        });
+    </script>
+</body></html>
